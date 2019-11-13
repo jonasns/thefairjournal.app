@@ -8,16 +8,16 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${launcherName}"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
 
         <activity
-            android:name="android.support.customtabs.trusted.LauncherActivity"
+            android:name="com.example.thefairjournal.MainActivity"
             android:label="${launcherName}">
 
             <meta-data
-                android:name="android.support.customtabs.trusted.DEFAULT_URL"
-                android:value="${defaultUrl}" />
+                android:name="asset_statements"
+                android:value="${assetStatements}" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,14 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.jonasns'
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.thefairjournal"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -16,7 +14,9 @@ android {
         manifestPlaceholders = [
                 hostName: "thefairjournal.com",
                 defaultUrl: "https://thefairjournal.com",
-                launcherName: "thefairjournal"
+                launcherName: "thefairjournal",
+                assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"],' +
+                        '"target": {"namespace": "web", "site": "https://thefairjournal.com"}}]'
         ]
     }
     buildTypes {
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.jonasns:thefairjournal_app:-SNAPSHOT'
+    implementation 'com.github.GoogleChrome:custom-tabs-client:a0f7418972'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
