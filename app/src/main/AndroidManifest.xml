@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.example.thefairjournal.MainActivity"
+            android:name="android.support.customtabs.trusted.LauncherActivity"
             android:label="${launcherName}">
 
             <meta-data
